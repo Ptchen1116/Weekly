@@ -26,7 +26,7 @@ When writing tests, I always keep one question in mind: can these tests help me 
 
 **2、Fixed the Meta Quest connection problem**
 
-It was difficult to locate the issue because I was not familiar with Meta Quest. Initially, I suspected it was a network or firewall problem. However, after running the WebRTC connection test on Meta Quest using [Connection Tester](https://livekit.com/webrtc/connection-test), I confirmed that the issue was not related to network connectivity.
+It was difficult to locate the issue because I was not familiar with Meta Quest. Initially, I suspected it was a network or firewall problem. However, after running the WebRTC connection test on Meta Quest using [WebRTC Browser Test](https://livekit.com/webrtc/browser-test), I confirmed that the issue was not related to network connectivity.
 
 My coworker suggested that the issue might be related to the proxy configuration. I checked the proxy logs and found the error `tls: unknown certificate authority`. After further investigation, I discovered that Meta Quest did not trust the SSL certificate issued by Let's Encrypt. I replaced the certificate with one issued by ZeroSSL, which resolved the connection issue.
 
